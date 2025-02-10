@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+
+
+
+  <body>
+
+    <header id="home">
+      <nav class="w-100 text-white">
+        
+        <div class="left">
+          <ul>
+            <li>
+              <a class="profile-name" href="#">
+                <img class="profile-img" src="images/dinarest.jpg" alt=""></img> 
+              </a>
+            </li>
+            <li class="name">
+              <p>Sairaj Jadhav</p>
+            </li>
+          </ul>
+          
+        </div>
+        
+        <div class="right">
+            <ul class="d-flex mt-3 text-center">
+                <li><a href="#home" alt="">Home</a></li>
+
+                <li><a href="#projects" alt="">Projects</a></li>
+                <li><a href="#certificates" alt="">Certificates</a></li>
+                <li><a href="#about" alt="">About Me</a></li>
+                <li><a href="#contact" alt="">Contact Me</a></li>
+            </ul>
+        </div>
+      </nav>
+
+      
+    </header>
+
+<div class="container">
+
+    <main>
+        <section class="first">
+            <div class="leftSection">
+                <!-- I am a <span class="span_col">Full-stack Developer and </span>  -->
+                <div class="bio"><span>I am eager to apply my knowledge and skills in a dynamic 
+                  and innovative environment, contributing to impactful projects and 
+                  continuing to learn and grow in the field of software development.</span>
+                  <hr>
+                  <p>Skills:</p>
+                  <li>Python, JavaScript (Es6+), HTML 5, CSS 3</li>
+                  <li>Django, Flask, Bootstrap 5, Beautiful Soup</li>
+                  <li>Git, VS Code, PyCharm, postman</li>
+                  <li>MySQL, Postgresql, Microsoft SQL Server</li>
+                </div>
+                  
+                <div class="mt-5 d-flex justify-content-around">
+                    <a href="https://www.linkedin.com/in/sairaj-jadhav-0b4480172/" target="_blank" class="btn btn-primary">
+                        LinkedIn <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Sairaj-25" target="_blank" class="btn btn-dark">
+                        GitHub <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1wrLcLXUiO7myWQTp-sb26df07kMqj-4e/view?usp=sharing" target="_blank" class="btn btn-success">
+                        Resume <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="rightSection">
+                <img src="images/pngegg.png" alt=""></img>
+            </div>
+        </section>
+
+<!-- #Projects -->     
+        <section id="projects" class="project">
+
+          <div class="project-container">
+
+              <h2 id="heading">Projects</h2>
+              <hr id="horizontal-line-below-heading">
+
+              <div class="project-item" onclick="showPopup('popup1')">
+                <h5>E-Commerce Website</h5>
+              </div>
+              <div class="project-item" onclick="showPopup('popup2')">
+                <h5>Backup and Recovery</h5>
+              </div>
+              <div class="project-item" onclick="showPopup('popup3')">
+                <h5>To-Do App</h5>
+              </div>
+              <div class="project-item" onclick="showPopup('popup4')">
+                <h5>AI Blog Generator</h5>
+              </div>
+    
+          </div>
+        </section>
+
+
+<!--  Popups  -->
+
+<div id="popup1" class="popup">
+  <div class="popup-content">
+    <span class="close text-danger fs-1" onclick="closePopup('popup1')">&times;</span>
+    <h3>E-Commerce Website </h3>
+    <br>
+        <ul>
+            <li>Technologies:  HTML, CSS, JavaScript, MySQL, Python, Django, Bootstrap 5
+            </li>
+            <br>
+            <a href="/" target="_blank" class="btn btn-dark">
+              GitHub <i class="fab fa-github"></i>
+            </a>    
+        </ul>
+  </div>
+</div>
+<div id="popup2" class="popup">
+  <div class="popup-content">
+    <span class="close text-danger fs-1" onclick="closePopup('popup2')">&times;</span>
+    <h3>Automated Backup and Recovery System for AWS Resources</h3>
+    <br>
+       <ul>
+         <li>Technologies: Python, AWS, REST APIs</li>
+         <br>
+         <a href="/" target="_blank" class="btn btn-dark">
+          GitHub <i class="fab fa-github"></i>
+        </a>    
+    </ul>
+  </div>
+</div>
+<div id="popup3" class="popup">
+  <div class="popup-content">
+    <span class="close text-danger fs-1" onclick="closePopup('popup3')">&times;</span>
+    <h3>Project Name 3</h3>
+    <br>
+    <p>Description: This project is about...</p>
+    <br>
+       <ul>
+         <li>Technologies: React, Node.js</li>
+         <br>
+         <a href="/" target="_blank" class="btn btn-dark">
+          GitHub <i class="fab fa-github"></i>
+        </a>    
+    </ul>
+  </div>
+</div>
+<div id="popup4" class="popup">
+  <div class="popup-content">
+    <span class="close text-danger fs-1" onclick="closePopup('popup4')">&times;</span>
+    <h3>Project Name 4</h3>
+    <br>
+    <p>Description: This project is about...</p>
+    <br>
+       <ul>
+         <li>Technologies: React, Node.js</li>
+         <br>
+         <a href="/" target="_blank" class="btn btn-dark">
+          GitHub <i class="fab fa-github"></i>
+        </a>    
+    </ul>
+  </div>
+</div>
+
+<!--Certificate-->
+
+<section id="certificates" class="Certificates">
+  <div class="container">
+    <h2 id="heading">Certificates</h2>
+    <hr id="horizontal-line-below-heading">
+  </div>
+  <div class="container">
+
+    <div class="row mt-5">
+
+        <!-- Certificate 1 -->
+          
+          <div class="col-md-4">
+           <div class="card">
+             <img src="images/Python Itvedant.jpg" class="card-img-top" alt="Certificate Image">
+             <div class="card-body">
+               <p class="card-text">Python & Django Certification</p>
+             </div>
+           </div>
+         </div>
+
+         <!-- Certificate 2 -->
+      <div class="col-md-4">
+          <div class="card">
+            <img src="images/Web Designing Basics .jpg" class="card-img-top" alt="Certificate Image">
+            <div class="card-body">
+              <p class="card-text">Web Designing Basics</p>
+            </div>
+          </div>
+      </div>
+
+         <!-- Certificate 3 -->
+      <div class="col-md-4">
+          <div class="card">
+            <img src="images/Screenshot 2025-01-28 181335.png" class="card-img-top" alt="Certificate Image">
+            <div class="card-body">
+              <p class="card-text">SQL</p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+
+      <div class="row mt-5">
+
+        <!-- Certificate 1 -->
+          
+          <div class="col-md-4">
+           <div class="card">
+             <img src="images/Screenshot 2025-01-28 182314.png" class="card-img-top" alt="Certificate Image">
+             <div class="card-body">
+               <p class="card-text">Networking Basics</p>
+             </div>
+           </div>
+         </div>
+
+         <!-- Certificate 2 -->
+      <div class="col-md-4">
+          <div class="card">
+            <img src="images/Screenshot 2025-01-28 181737.png" class="card-img-top" alt="Certificate Image">
+            <div class="card-body">
+              <p class="card-text">Web Development with Python</p>
+            </div>
+          </div>
+      </div>
+
+         <!-- Certificate 3 -->
+      <div class="col-md-4">
+          <div class="card">
+            <img src="images/Screenshot 2025-01-28 182034.png" class="card-img-top" alt="Certificate Image">
+            <div class="card-body">
+              <p class="card-text">Rest API</p>
+            </div>
+          </div>
+      </div>
+
+
+  </div>
+
+
+</div>
+
+</section>
+
+<!--contact me-->
+
+        <section id="contact" class="cotact-me">
+          <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+              <div class="contact-left-title">
+              <h2>Contact Me</h2>
+              <hr>
+            </div>
+            <input type="hidden" name="access_key" value="6108fe11-283b-4e6e-b160-56e1c2dd1243">
+            
+              <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+              <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+              <textarea name="message" placeholder="Message" class="contact-inputs"></textarea>
+              <button type="submit">Submit <img src="images/arrow_icon.png" alt=""></button>
+            </form>
+            <div class="contact-right">
+              <img src="images/right_img.png" alt="/" >
+            </div>
+          </div>
+        </section>
+
+
+</div>
+
+          <!-- Footer -->
+          <footer>
+            <p class="text-white">© 2024 Sairaj Jadhav. All Rights Reserved.</p>
+          </footer>
+    </main>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+
+  </body
+</html>
+
