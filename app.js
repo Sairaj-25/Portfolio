@@ -5,3 +5,11 @@ function showPopup(id) {
 function closePopup(id) {
     document.getElementById(id).style.display = 'none';
 }
+
+// Closes the popup if the user clicks the dark background
+function closePopupOutside(event, id) {
+    if (event.target.id === id) {
+        closePopup(id);
+    }
+}
+
