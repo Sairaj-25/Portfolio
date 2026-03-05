@@ -1,303 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Sairaj Jadhav | Portfolio</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-
-
-  <body>
+<body>
 
     <header id="home">
-      <nav class="w-100 text-white">
-        
-        <div class="left">
-          <ul>
-            <li>
-              <a class="profile-name" href="#">
-                <img class="profile-img" src="images/dinarest.jpg" alt=""></img> 
-              </a>
-            </li>
-            <li class="name">
-              <p>Sairaj Jadhav</p>
-            </li>
-          </ul>
-          
-        </div>
-        
-        <div class="right">
-            <ul class="d-flex mt-3 text-center">
-                <li><a href="#home" alt="">Home</a></li>
-
-                <li><a href="#projects" alt="">Projects</a></li>
-                <li><a href="#certificates" alt="">Certificates</a></li>
-                <li><a href="#about" alt="">About Me</a></li>
-                <li><a href="#contact" alt="">Contact Me</a></li>
-            </ul>
-        </div>
-      </nav>
-
-      
+        <nav class="navbar navbar-expand-lg navbar-dark glass-nav fixed-top py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#home">
+                    <img class="profile-img shadow-sm" src="images/dinarest.jpg" alt="Sairaj Profile Picture">
+                    <span class="name fw-bold ms-3">Sairaj Jadhav</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3 text-center mt-3 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-<div class="container">
+    <main class="container mt-5 pt-5">
+        
+        <section class="first row align-items-center min-vh-75 py-5 gap-5 gap-lg-0" >
+            <div class="col-lg-6 leftSection pe-lg-5">
+                <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="gradient-text">Sairaj</span></h1>
+                <h3 class="h4 text-info mb-4">Software Developer</h3>
+                <div class="bio">
 
-    <main>
-        <section class="first">
-            <div class="leftSection">
-                <!-- I am a <span class="span_col">Full-stack Developer and </span>  -->
-                <div class="bio"><span>I am eager to apply my knowledge and skills in a dynamic 
-                  and innovative environment, contributing to impactful projects and 
-                  continuing to learn and grow in the field of software development.</span>
-                  <hr>
-                  <p>Skills:</p>
-                  <li>Python, JavaScript (Es6+), HTML 5, CSS 3</li>
-                  <li>Django, Flask, Bootstrap 5, Beautiful Soup</li>
-                  <li>Git, VS Code, PyCharm, postman</li>
-                  <li>MySQL, Postgresql, Microsoft SQL Server</li>
+                    
+                    <hr class="accent-line my-4">
+                    <h5 class="fw-bold mb-3">Core Skills:</h5>
+                    <ul class="skills-list text-light opacity-75">
+                        <li><i class="fab fa-python text-warning me-2"></i> Python, JavaScript (ES6+), HTML5, CSS3</li>
+                        <li><i class="fas fa-code text-info me-2"></i> Django, Flask, Bootstrap 5, REST APIs</li>
+                        <li><i class="fas fa-database text-success me-2"></i> MySQL, PostgreSQL, MS SQL Server</li>
+                        <li><i class="fab fa-git-alt text-danger me-2"></i> Git, GitHub Actions, VS Code, Postman</li>
+                    </ul>
                 </div>
                   
-                <div class="mt-5 d-flex justify-content-around">
-                    <a href="https://www.linkedin.com/in/sairaj-jadhav-0b4480172/" target="_blank" class="btn btn-primary">
-                        LinkedIn <i class="fab fa-linkedin"></i>
+                <div class="mt-5 d-flex flex-wrap gap-3">
+                    <a href="https://www.linkedin.com/in/sairaj-jadhav-0b4480172/" target="_blank" class="btn btn-outline-light px-4 py-2 custom-btn">
+                        LinkedIn <i class="fab fa-linkedin ms-2"></i>
                     </a>
-                    <a href="https://github.com/Sairaj-25" target="_blank" class="btn btn-dark">
-                        GitHub <i class="fab fa-github"></i>
+                    <a href="https://github.com/Sairaj-25" target="_blank" class="btn btn-outline-light px-4 py-2 custom-btn">
+                        GitHub <i class="fab fa-github ms-2"></i>
                     </a>
-                    <a href="https://drive.google.com/file/d/1wrLcLXUiO7myWQTp-sb26df07kMqj-4e/view?usp=sharing" target="_blank" class="btn btn-success">
-                        Resume <i class="fas fa-download"></i>
+                    <a href="https://drive.google.com/file/d/1wrLcLXUiO7myWQTp-sb26df07kMqj-4e/view?usp=sharing" target="_blank" class="btn btn-outline-light fw-bold px-4 py-2 custom-btn">
+                        Resume <i class="fas fa-download ms-2"></i>
                     </a>
                 </div>
             </div>
             
-            <div class="rightSection">
-                <img src="images/pngegg.png" alt=""></img>
+            <div class="col-lg-6 rightSection text-center">
+                <div class="gif-container p-3 glass-card">
+                    <img src="images/dinarest.jpg" alt="Git Flow and CI/CD Pipeline Animation" class="img-fluid rounded-4 shadow-glow" style="max-height: 400px; object-fit: cover;">
+                </div>
             </div>
         </section>
 
-<!-- #Projects -->     
-        <section id="projects" class="project">
+        <section id="projects" class="py-5" >
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold gradient-text">Projects</h2>
+                <hr class="accent-line mx-auto">
+            </div>
 
-          <div class="project-container">
-
-              <h2 id="heading">Projects</h2>
-              <hr id="horizontal-line-below-heading">
-
-              <div class="project-item" onclick="showPopup('popup1')">
-                <h5>E-Commerce Website</h5>
-              </div>
-              <div class="project-item" onclick="showPopup('popup2')">
-                <h5>Backup and Recovery</h5>
-              </div>
-              <div class="project-item" onclick="showPopup('popup3')">
-                <h5>To-Do App</h5>
-              </div>
-              <div class="project-item" onclick="showPopup('popup4')">
-                <h5>AI Blog Generator</h5>
-              </div>
-    
-          </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-item glass-card" onclick="showPopup('popup1')">
+                        <i class="fas fa-shopping-cart fa-2x mb-3 text-info"></i>
+                        <h5 class="fw-bold">Shopnow</h5>
+                        <p class="small opacity-75 mt-2">Django E-Commerce</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-item glass-card" onclick="showPopup('popup2')">
+                        <i class="fas fa-robot fa-2x mb-3 text-danger"></i>
+                        <h5 class="fw-bold">AI Blog Generator</h5>
+                        <p class="small opacity-75 mt-2">AssemblyAI & Gemini</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-item glass-card" onclick="showPopup('popup3')">
+                        <i class="fas fa-tasks fa-2x mb-3 text-warning"></i>
+                        <h5 class="fw-bold">Django To-Do</h5>
+                        <p class="small opacity-75 mt-2">Task Management & CI/CD</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-item glass-card" onclick="showPopup('popup4')">
+                        <i class="fas fa-cloud-upload-alt fa-2x mb-3 text-success"></i>
+                        <h5 class="fw-bold">AWS Backup System</h5>
+                        <p class="small opacity-75 mt-2">Python Automation</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-
-<!--  Popups  -->
-
-<div id="popup1" class="popup">
-  <div class="popup-content">
-    <span class="close text-danger fs-1" onclick="closePopup('popup1')">&times;</span>
-    <h3>E-Commerce Website </h3>
-    <br>
-        <ul>
-            <li>Technologies:  HTML, CSS, JavaScript, MySQL, Python, Django, Bootstrap 5
-            </li>
-            <br>
-            <a href="https://github.com/Sairaj-25/Shopnow" target="_blank" class="btn btn-dark">
-              GitHub <i class="fab fa-github"></i>
-            </a>    
-        </ul>
-  </div>
-</div>
-<div id="popup2" class="popup">
-  <div class="popup-content">
-    <span class="close text-danger fs-1" onclick="closePopup('popup2')">&times;</span>
-    <h3>Automated Backup and Recovery System for AWS Resources</h3>
-    <br>
-       <ul>
-         <li>Technologies: Python, AWS, REST APIs</li>
-         <br>
-         <a href="/" target="_blank" class="btn btn-dark">
-          GitHub <i class="fab fa-github"></i>
-        </a>    
-    </ul>
-  </div>
-</div>
-<div id="popup3" class="popup">
-  <div class="popup-content">
-    <span class="close text-danger fs-1" onclick="closePopup('popup3')">&times;</span>
-    <h3>Project Name 3</h3>
-    <br>
-    <p>Description: This project is about...</p>
-    <br>
-       <ul>
-         <li>Technologies: React, Node.js</li>
-         <br>
-         <a href="/" target="_blank" class="btn btn-dark">
-          GitHub <i class="fab fa-github"></i>
-        </a>    
-    </ul>
-  </div>
-</div>
-<div id="popup4" class="popup">
-  <div class="popup-content">
-    <span class="close text-danger fs-1" onclick="closePopup('popup4')">&times;</span>
-    <h3>Project Name 4</h3>
-    <br>
-    <p>Description: This project is about...</p>
-    <br>
-       <ul>
-         <li>Technologies: React, Node.js</li>
-         <br>
-         <a href="/" target="_blank" class="btn btn-dark">
-          GitHub <i class="fab fa-github"></i>
-        </a>    
-    </ul>
-  </div>
-</div>
-
-<!--Certificate-->
-
-<section id="certificates" class="Certificates">
-  <div class="container">
-    <h2 id="heading">Certificates</h2>
-    <hr id="horizontal-line-below-heading">
-  </div>
-  <div class="container">
-
-    <div class="row mt-5">
-
-        <!-- Certificate 1 -->
+        <div id="popup1" class="popup" onclick="closePopupOutside(event, 'popup1')">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup1')">&times;</span>
+                <h3 class="fw-bold text-info">Shopnow (E-Commerce)</h3>
+                <hr>
+                <ul class="text-light opacity-75 mt-3 text-start">
+                    <li class="mb-2"><strong>Technologies:</strong> Django, Python, MySQL, Bootstrap 5</li>
+                    <li class="mb-2"><strong>Overview:</strong> A fully functional e-commerce platform allowing users to browse products by category, manage their shopping cart, and simulate the checkout process.</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://github.com/Sairaj-25/Shopnow" target="_blank" class="btn btn-outline-light w-100">
+                        View Source Code <i class="fab fa-github ms-2"></i>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        
+        <div id="popup2" class="popup" onclick="closePopupOutside(event, 'popup2')">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                <h3 class="fw-bold text-info">AI Blog Generator</h3>
+                <hr>
+                <ul class="text-light opacity-75 mt-3 text-start">
+                    <li class="mb-2"><strong>Technologies:</strong> Django, AssemblyAI, Google Gemini API, yt-dlp</li>
+                    <li class="mb-2"><strong>Overview:</strong> Automates content creation by downloading audio from YouTube URLs, transcribing the speech to text via AssemblyAI, and structuring it into a readable blog post using Google's Gemini LLM.</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://github.com/Sairaj-25/yt-ai-blog" target="_blank" class="btn btn-outline-light w-100">
+                        View Source Code <i class="fab fa-github ms-2"></i>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        
+        <div id="popup3" class="popup" onclick="closePopupOutside(event, 'popup3')">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup3')">&times;</span>
+                <h3 class="fw-bold text-info">Django To-Do App</h3>
+                <hr>
+                <ul class="text-light opacity-75 mt-3 text-start">
+                    <li class="mb-2"><strong>Technologies:</strong> Python, Django, GitHub Actions</li>
+                    <li class="mb-2"><strong>Overview:</strong> A secure task management application featuring user authentication, task search functionality, and an automated CI/CD pipeline integrated directly via GitHub Actions.</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://github.com/Sairaj-25/django-to-do-app" target="_blank" class="btn btn-outline-light w-100">
+                        View Source Code <i class="fab fa-github ms-2"></i>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        
+        <div id="popup4" class="popup" onclick="closePopupOutside(event, 'popup4')">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup4')">&times;</span>
+                <h3 class="fw-bold text-info">Automated AWS Backup</h3>
+                <hr>
+                <ul class="text-light opacity-75 mt-3 text-start">
+                    <li class="mb-2"><strong>Technologies:</strong> Python, AWS, REST APIs</li>
+                    <li class="mb-2"><strong>Overview:</strong> An automated backup and recovery system designed to manage and secure AWS resources via scripted REST API calls.</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="https://github.com/Sairaj-25" target="_blank" class="btn btn-outline-light w-100">
+                        View GitHub <i class="fab fa-github ms-2"></i>
+                    </a>    
+                </div>
+            </div>
+        </div>
+        
+        <section id="certificates" class="py-5">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 fw-bold gradient-text">Certificates</h2>
+                <hr class="accent-line mx-auto">
+            </div>
           
-          <div class="col-md-4">
-           <div class="card">
-             <img src="images/Python Itvedant.jpg" class="card-img-top" alt="Certificate Image">
-             <div class="card-body">
-               <p class="card-text">Python & Django Certification</p>
-             </div>
-           </div>
-         </div>
-
-         <!-- Certificate 2 -->
-      <div class="col-md-4">
-          <div class="card">
-            <img src="images/Web Designing Basics .jpg" class="card-img-top" alt="Certificate Image">
-            <div class="card-body">
-              <p class="card-text">Web Designing Basics</p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 row-cols-lg-6 g-4">
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Python Itvedant.jpg" data-alt="Python & Django Certificate">
+                        <img src="images/Python Itvedant.jpg" class="card-img-top cert-img" alt="Python &         Django Certificate">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">Python & Django Certificate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Web Designing Basics .jpg" data-alt="Web Designing Basics">
+                        <img src="images/Web Designing Basics .jpg" class="card-img-top cert-img" alt="Web        Designing Basics">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">Web Designing Basics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Screenshot 2025-01-28 181335.png" data-alt="SQL Certificate">
+                        <img src="images/Screenshot 2025-01-28 181335.png" class="card-img-top cert-img"        alt="SQL Certificate">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Screenshot 2025-01-28 182314.png" data-alt="Networking Basics">
+                        <img src="images/Screenshot 2025-01-28 182314.png" class="card-img-top cert-img"        alt="Networking Basics">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">Networking Basics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Screenshot 2025-01-28 181737.png" data-alt="Web Development with       Python">
+                        <img src="images/Screenshot 2025-01-28 181737.png" class="card-img-top cert-img"        alt="Web Development with Python">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">Web Development with Python</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Screenshot 2025-01-28 182034.png" data-alt="Rest API">
+                        <img src="images/Screenshot 2025-01-28 182034.png" class="card-img-top cert-img"        alt="Rest API">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">Rest API</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Screenshot 2025-01-28 181335.png" data-alt="SQL Certificate">
+                        <img src="images/Screenshot 2025-01-28 181335.png" class="card-img-top cert-img"        alt="SQL Certificate">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card custom-cert-card bg-dark text-light border-secondary hover-zoom"         style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certificateModal"        data-img="images/Screenshot 2025-01-28 182314.png" data-alt="JavaScript Fundamentals">
+                        <img src="images/Screenshot 2025-01-28 182314.png" class="card-img-top cert-img"        alt="JavaScript Fundamentals">
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">JavaScript Fundamentals</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
+        </section>
 
-         <!-- Certificate 3 -->
-      <div class="col-md-4">
-          <div class="card">
-            <img src="images/Screenshot 2025-01-28 181335.png" class="card-img-top" alt="Certificate Image">
-            <div class="card-body">
-              <p class="card-text">SQL</p>
+        <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark border-secondary">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center pt-0">
+                        <img src="" id="modalImage" alt="Certificate Image">
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
+        </div>
 
-    </div>
-
-
-      <div class="row mt-5">
-
-        <!-- Certificate 1 -->
-          
-          <div class="col-md-4">
-           <div class="card">
-             <img src="images/Screenshot 2025-01-28 182314.png" class="card-img-top" alt="Certificate Image">
-             <div class="card-body">
-               <p class="card-text">Networking Basics</p>
-             </div>
-           </div>
-         </div>
-
-         <!-- Certificate 2 -->
-      <div class="col-md-4">
-          <div class="card">
-            <img src="images/Screenshot 2025-01-28 181737.png" class="card-img-top" alt="Certificate Image">
-            <div class="card-body">
-              <p class="card-text">Web Development with Python</p>
-            </div>
-          </div>
-      </div>
-
-         <!-- Certificate 3 -->
-      <div class="col-md-4">
-          <div class="card">
-            <img src="images/Screenshot 2025-01-28 182034.png" class="card-img-top" alt="Certificate Image">
-            <div class="card-body">
-              <p class="card-text">Rest API</p>
-            </div>
-          </div>
-      </div>
-
-
-  </div>
-
-
-</div>
-
-</section>
-
-<!--contact me-->
-
-        <section id="contact" class="cotact-me">
-          <div class="contact-container">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-              <div class="contact-left-title">
-              <h2>Contact Me</h2>
-              <hr>
-            </div>
-            <input type="hidden" name="access_key" value="6108fe11-283b-4e6e-b160-56e1c2dd1243">
+        <section id="contact" class="row py-5 mt-5 mb-5 align-items-center" >
             
-              <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-              <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-              <textarea name="message" placeholder="Message" class="contact-inputs"></textarea>
-              <button type="submit">Submit <img src="images/arrow_icon.png" alt=""></button>
-            </form>
-            <div class="contact-right">
-              <img src="images/right_img.png" alt="/" >
-            </div>
-          </div>
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="section-title text-center mb-5">
+                        <h2 class="display-5 fw-bold gradient-text">Contact</h2>
+                        <hr class="accent-line mx-auto">
+                    </div>
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST" class="d-flex flex-column gap-3">
+                        <input type="hidden" name="access_key" value="6108fe11-283b-4e6e-b160-56e1c2dd1243">
+                        
+                        <input type="text" name="name" placeholder="Your Full Name" class="form-control form-control-lg bg-light text-light border-secondary" required>
+                        <input type="email" name="email" placeholder="Your Email Address" class="form-control form-control-lg bg-light text-light border-secondary" required>
+                        <textarea name="message" placeholder="How can I help you?" rows="4" class="form-control form-control-lg bg-grey text-light border-secondary" required></textarea>
+                        
+                        <button type="submit" class="btn btn-info btn-lg fw-bold text-dark mt-2 w-50">
+                            Send Message <i class="fas fa-paper-plane ms-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <img src="images/right_img.png" alt="Contact Illustration" class="img-fluid floating-img" style="max-width: 80%;">
+                </div>
+            
         </section>
 
-
-</div>
-
-          <!-- Footer -->
-          <footer>
-            <p class="text-white">© 2024 Sairaj Jadhav. All Rights Reserved.</p>
-          </footer>
     </main>
+
+    <footer class="text-center py-4 glass-nav mt-auto">
+        <p class="text-light opacity-75 mb-0">© 2024 Sairaj Jadhav. All Rights Reserved.</p>
+        <div class="mt-2">
+            <a href="https://github.com/Sairaj-25" class="text-light me-3" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sairaj-jadhav-0b4480172/" class="text-light" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
-
-
-  </body
+</body>
 </html>
-
-
