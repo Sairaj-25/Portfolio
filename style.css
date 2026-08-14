@@ -2,255 +2,750 @@
    CSS Variables (Theme Colors)
    ========================================== */
 :root {
-    --bg-main: #0f172a;       /* Slate 900 - Deep dark blue/gray */
-    --bg-card: rgba(30, 41, 59, 0.7); /* Slate 800 with transparency */
-    --accent-primary: #00e5ff; /* Cyan / Turquoise */
-    --accent-secondary: #b056ff; /* Purple / Indigo */
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
+    --bg-main: #080c14;
+    --bg-secondary: #0d1526;
+    --bg-card: rgba(15, 25, 50, 0.75);
+    --accent-primary: #00d4ff;
+    --accent-secondary: #7c3aed;
+    --accent-green: #10b981;
+    --accent-orange: #f59e0b;
+    --text-main: #f0f6ff;
+    --text-muted: #8892a4;
+    --border: rgba(255, 255, 255, 0.08);
+    --glow: rgba(0, 212, 255, 0.15);
 }
 
 /* ==========================================
    Base & Reset
    ========================================== */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Fixes navbar hiding section titles when clicked */
+body {
+    background-color: var(--bg-main);
+    background-image:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0, 212, 255, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 110%, rgba(124, 58, 237, 0.07) 0%, transparent 60%);
+    color: var(--text-main);
+    font-family: 'Inter', 'Poppins', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
 section[id] {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
 }
 
 /* ==========================================
    Typography & Accents
    ========================================== */
 .gradient-text {
-    background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     display: inline-block;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
 }
 
 .accent-line {
     border: none;
-    width: 60px;
-    height: 5px;
-    background: var(--accent-primary);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
     border-radius: 10px;
     opacity: 1;
-}
-
-.skills-list {
-    list-style: none;
-    padding: 0;
-}
-
-.skills-list li {
-    margin-bottom: 0.8rem;
-    font-size: 1.05rem;
+    margin: 0.75rem auto 0;
 }
 
 /* ==========================================
    Navbar (Glassmorphism)
    ========================================== */
 .glass-nav {
-    background: rgba(15, 23, 42, 0.85) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(8, 12, 20, 0.85) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
 }
 
 .profile-img {
-    width: 45px; 
-    height: 45px; 
-    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--accent-primary);
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-brand .name {
     color: var(--text-main);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--text-muted);
     font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
     color: var(--accent-primary);
+    background: rgba(0, 212, 255, 0.07);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--accent-primary);
 }
 
 /* ==========================================
-   Buttons & Images
+   Hero Section
    ========================================== */
-.custom-btn {
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    border-radius: 50px;
+    padding: 0.35rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent-primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero-badge .dot {
+    width: 7px;
+    height: 7px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.3);
+    }
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin: 1rem 0 1.5rem;
+}
+
+.hero-subtitle span {
+    color: var(--accent-primary);
+}
+
+.hero-bio {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.75rem;
     border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: all 0.3s ease;
 }
 
-.custom-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 229, 255, 0.2);
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    color: #fff;
 }
 
-/* Glowing Image Effect */
-.shadow-glow {
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+.btn-outline-custom {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 0.7rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-.shadow-glow:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 45px rgba(0, 229, 255, 0.3);
-}
-
-/* ==========================================
-   Project Cards (Glassmorphism)
-   ========================================== */
-.glass-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.4s ease;
-    cursor: pointer;
-}
-
-.glass-card:hover {
-    transform: translateY(-8px);
+.btn-outline-custom:hover {
     border-color: var(--accent-primary);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    color: var(--accent-primary);
+    background: rgba(0, 212, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.social-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.15);
+}
+
+/* Hero Image */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero-image-wrapper img {
+    width: 420px;
+    height: 420px;
+    border-radius: 30px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper img:hover {
+    transform: scale(1.03);
+}
+
+/* Stats Row */
+.stats-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent-primary);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
 }
 
 /* ==========================================
-   Certificates (Strict 60/40 Split Layout)
+   Skills Section
    ========================================== */
-.custom-cert-card {
-    height: 200px; /* Forces uniform height for all certificates */
+.skills-section {
+    padding: 80px 0;
+}
+
+.skill-category-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.skill-category-card:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.skill-category-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: rgba(0, 212, 255, 0.08);
+}
+
+/* ==========================================
+   Projects Section
+   ========================================== */
+.projects-section {
+    padding: 80px 0;
+}
+
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.filter-tab {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 50px;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.custom-cert-card .cert-img {
-    height: 60%;
-    width: 100%;
-    object-fit: cover; /* Prevents stretching */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-.custom-cert-card .card-body {
-    height: 40%;
+.project-card-header {
+    padding: 1.5rem 1.5rem 0;
     display: flex;
-    align-items: center;      /* Vertically centers text */
-    justify-content: center;  /* Horizontally centers text */
-    padding: 0.5rem;
-    background: rgba(30, 41, 59, 0.9);
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-.custom-cert-card .card-text {
-    margin: 0;
+.project-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.project-card-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-link {
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: var(--accent-primary);
+}
+
+.project-card-body {
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+}
+
+.project-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.project-desc {
     font-size: 0.85rem;
-    line-height: 1.3;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
 }
 
-.hover-zoom:hover {
-    transform: scale(1.05);
-    border-color: var(--accent-primary) !important;
-    z-index: 2; /* Keeps zoomed card above others */
+.project-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Certificate Modal Fixes */
-#modalImage {
+.project-highlights li {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 0.2rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.project-highlights li::before {
+    content: '▸';
+    color: var(--accent-primary);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.project-card-footer {
+    padding: 1rem 1.5rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tech-badge {
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    color: var(--accent-primary);
+    border-radius: 5px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   Certificates Section
+   ========================================== */
+.certs-section {
+    padding: 80px 0;
+}
+
+.cert-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.cert-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--accent-primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.cert-card img {
     width: 100%;
-    height: auto;
+    height: 140px;
+    object-fit: cover;
+}
+
+.cert-card-body {
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.cert-card-body p {
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Certificate Modal */
+#certModal .modal-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+#certModalImg {
+    width: 100%;
     border-radius: 8px;
 }
 
 /* ==========================================
-   Custom Popups (Project Details)
+   Contact Section
    ========================================== */
-.popup {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(6px);
-    z-index: 1050;
+.contact-section {
+    padding: 80px 0 100px;
 }
 
-.popup-content {
-    background-color: #1e293b;
-    margin: 10vh auto;
-    padding: 2.5rem;
-    border: 1px solid var(--accent-primary);
-    width: 90%;
-    max-width: 600px;
-    border-radius: 15px;
-    position: relative;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-    animation: modalFadeIn 0.3s ease-out forwards;
+.contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
 }
 
-@keyframes modalFadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.popup .close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 2.5rem;
+.contact-info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-info-text h6 {
+    font-size: 0.8rem;
     color: var(--text-muted);
-    cursor: pointer;
-    line-height: 1;
-    transition: color 0.2s;
+    margin: 0;
 }
 
-.popup .close:hover {
-    color: #ef4444; /* Red hover state */
+.contact-info-text p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.contact-info-text a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.contact-info-text a:hover {
+    color: var(--accent-primary);
+}
+
+.form-field {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    color: var(--text-main) !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.9rem !important;
+    transition: border-color 0.2s ease !important;
+}
+
+.form-field::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.form-field:focus {
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1) !important;
+    background: rgba(0, 212, 255, 0.03) !important;
+    outline: none !important;
 }
 
 /* ==========================================
-   Contact Section & Animations
+   Section Header
    ========================================== */
-/* .form-control {
-    background-color: rgba(15, 23, 42, 0.6) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    color: var(--text-main) !important;
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
 
-.form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(0, 229, 255, 0.25) !important;
-    border-color: var(--accent-primary) !important;
-} */
+.section-header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+}
 
-/* Floating Animation for Contact Image */
-.floating-img {
-    animation: float 6s ease-in-out infinite;
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+    background: rgba(8, 12, 20, 0.9);
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+footer .footer-links a {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+footer .footer-links a:hover {
+    color: var(--accent-primary);
+}
+
+/* ==========================================
+   Animations (Fade-in on Scroll)
+   ========================================== */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.floating-anim {
+    animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0 60px;
+    }
 
-html {
-  scroll-behavior: smooth;
+    .hero-image-wrapper img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact-card {
+        padding: 1.75rem;
+    }
+
+    .stats-row {
+        gap: 1rem;
+    }
 }
