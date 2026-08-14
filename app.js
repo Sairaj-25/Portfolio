@@ -59,6 +59,17 @@ filterTabs.forEach(tab => {
     });
 });
 
+// Apply default filter on load
+(function applyDefaultFilter() {
+    const defaultFilter = 'data-engineering';
+    projectCards.forEach(card => {
+        const tags = card.dataset.tags || '';
+        if (!tags.includes(defaultFilter)) {
+            card.style.display = 'none';
+        }
+    });
+})();
+
 // ==========================================
 // Certificate modal
 // ==========================================
@@ -90,7 +101,7 @@ window.addEventListener('scroll', () => {
 // ==========================================
 // Typed text effect in hero
 // ==========================================
-const roles = ['Backend Developer', 'Python Engineer', 'FastAPI & Django Dev', 'Cloud & DevOps Enthusiast'];
+const roles = ['Data Engineer', 'Python · SQL · PySpark', 'Databricks · Snowflake · Airflow', 'ETL/ELT · Cloud Pipelines'];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
